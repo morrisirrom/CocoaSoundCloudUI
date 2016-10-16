@@ -352,7 +352,7 @@
 	[controller setPeoplePickerDelegate:self];
 	[controller setDisplayedProperties:[NSArray arrayWithObject:[NSNumber numberWithInt:kABPersonEmailProperty]]];
 	controller.modalPresentationStyle = UIModalPresentationFormSheet;
-	[self.navigationController presentModalViewController:controller animated:YES];	
+	[self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark ViewController
@@ -390,7 +390,7 @@
 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person;
@@ -414,7 +414,7 @@
 		[emails addObject:emailToShareTo];
 		self.emailsField.text = [emails componentsJoinedByString:@", "];
 		
-		[self dismissModalViewControllerAnimated:YES];
+		[self dismissViewControllerAnimated:YES completion:nil];
 		return NO;
 	}
 	
