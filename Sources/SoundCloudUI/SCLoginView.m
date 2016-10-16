@@ -363,7 +363,7 @@
 
 - (void)cancel:(id)sender
 {
-    [(UIViewController *)self.loginDelegate dismissModalViewControllerAnimated:YES];
+    [(UIViewController *)self.loginDelegate dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -
