@@ -156,7 +156,7 @@
         title = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
         title.backgroundColor = [UIColor clearColor];
         title.numberOfLines = 2;
-        title.lineBreakMode = UILineBreakModeWordWrap;
+        title.lineBreakMode = NSLineBreakByWordWrapping;
         title.text = nil;
         title.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
         [self.contentView addSubview:title];

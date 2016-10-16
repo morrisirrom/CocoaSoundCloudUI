@@ -126,7 +126,7 @@
 {
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.titleLabel.numberOfLines = 2;
-    self.titleLabel.textAlignment = UITextAlignmentLeft;
+    self.titleLabel.textAlignment = NSTextAlignmentLeft;
     self.titleLabel.text = [NSString stringWithFormat:SCLocalizedString(@"credential_title", @"Title"),
                             [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
     self.titleLabel.textColor = [UIColor soundCloudGrey];
@@ -221,8 +221,8 @@
     self.tosLabel = [[OHAttributedLabel alloc] initWithFrame:CGRectZero];
     self.tosLabel.attributedText = text;
     self.tosLabel.centerVertically = NO;
-    self.tosLabel.lineBreakMode = UILineBreakModeWordWrap;
-    self.tosLabel.textAlignment = UITextAlignmentCenter;
+    self.tosLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.tosLabel.textAlignment = NSTextAlignmentCenter;
     self.tosLabel.textColor = [UIColor soundCloudLightGrey];
     self.tosLabel.backgroundColor = [UIColor clearColor];
     self.tosLabel.delegate = self;

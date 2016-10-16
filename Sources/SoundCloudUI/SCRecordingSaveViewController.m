@@ -492,14 +492,14 @@ const NSArray *allServices = nil;
     NSMutableArray *toolbarItems = [NSMutableArray arrayWithCapacity:3];
     
     [toolbarItems addObject:[[[UIBarButtonItem alloc] initWithTitle:SCLocalizedString(@"cancel", @"Cancel")
-                                                              style:UIBarButtonItemStyleBordered
+                                                              style:UIBarButtonItemStylePlain
                                                              target:self
                                                              action:@selector(cancel)] autorelease]];
     
     [toolbarItems addObject:[[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease]];
     
     [toolbarItems addObject:[[[UIBarButtonItem alloc] initWithTitle:SCLocalizedString(@"upload_and_share", @"Upload & Share")
-                                                            style:UIBarButtonItemStyleBordered
+                                                            style:UIBarButtonItemStylePlain
                                                              target:self
                                                              action:@selector(upload)] autorelease]];
     
@@ -808,7 +808,7 @@ const NSArray *allServices = nil;
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor listSubtitleColor];
-    label.lineBreakMode = UILineBreakModeWordWrap;
+    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     label.font = [UIFont systemFontOfSize:15.0];
     label.text = text;
