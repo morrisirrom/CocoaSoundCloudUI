@@ -248,8 +248,13 @@
     - CGRectGetWidth(self.avatarImageView.bounds)
     - CGRectGetWidth(self.logoutSeparator.bounds)
     - CGRectGetWidth(self.logoutButton.bounds);
+    CGSize userLabelSize = CGSizeZero;;
+    if(self.userNameLabel.text)
+    {
+        NSDictionary* fontAttributes = @{NSFontAttributeName: self.userNameLabel.font};
+        userLabelSize = [self.userNameLabel.text sizeWithAttributes:fontAttributes];
+    }
     
-    CGSize userLabelSize = self.userNameLabel.text ? [self.userNameLabel.text sizeWithFont:self.userNameLabel.font] : CGSizeZero;
     userLabelSize.width = MIN(userLabelSize.width, maxUserLabelWidth);
     CGRect labelRect = CGRectZero;
     labelRect.size = userLabelSize;
@@ -275,7 +280,8 @@
     
     CGRect logoutButtonFrame = CGRectZero;
     if (self.logoutButton.titleLabel.text) {
-        logoutButtonFrame.size = [self.logoutButton.titleLabel.text sizeWithFont:self.logoutButton.titleLabel.font];
+        NSDictionary* fontAttributes = @{NSFontAttributeName: self.logoutButton.titleLabel.font};
+        logoutButtonFrame.size = [self.logoutButton.titleLabel.text sizeWithAttributes:fontAttributes];
         logoutButtonFrame.origin = CGPointMake(CGRectGetMaxX(self.logoutSeparator.frame) + SPACING, SPACING);
     }
     self.logoutButton.frame = logoutButtonFrame;
