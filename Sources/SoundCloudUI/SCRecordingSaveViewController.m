@@ -17,7 +17,7 @@
  * http://soundcloud.com/api
  * 
  */
-
+#if 0
 #import "UIViewController+SoundCloudUI.h"
 #import "SCAlertView.h"
 
@@ -1695,4 +1695,4 @@ const NSArray *allServices = nil;
 }
 
 @end
-
+#endif

@@ -17,7 +17,7 @@
  * http://soundcloud.com/api
  * 
  */
-
+#if 0
 #import <UIKit/UIKit.h>
 
 #import "SCSharingMailPickerController.h"
@@ -64,3 +64,4 @@ typedef void(^SCRecordingSaveViewControllerCompletionHandler)(NSDictionary *trac
 - (void)setFoursquareClientID:(NSString *)aClientID clientSecret:(NSString *)aClientSecret;
 
 @end
+#endif

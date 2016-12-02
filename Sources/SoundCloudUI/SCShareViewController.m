@@ -17,7 +17,7 @@
  * http://soundcloud.com/api
  * 
  */
-
+#if 0
 #import "UIViewController+SoundCloudUI.h"
 #import "UIDevice+SoundCloudUI.h"
 
@@ -135,3 +135,4 @@
 
 
 @end
+#endif
